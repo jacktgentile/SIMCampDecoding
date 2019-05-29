@@ -11,10 +11,11 @@ def compare(password, query):
 
 if __name__ == '__main__':
     random.seed()
-    password = random.randint(0,1024)
-    count = 1
-    delta = 512
+    max = 100000000
+    delta = max / 2
+    password = random.randint(0,max)
 
+    count = 1
     guess = delta
     while(password != guess):
         delta /= 2
@@ -23,4 +24,4 @@ if __name__ == '__main__':
         else:
             guess += delta
         count += 1
-    print(str(guess) + " is correct, and it only took you " + str(count) + " tries!")
+    print("\n" + str(guess) + " is correct, and it only took you " + str(count) + " tries!")

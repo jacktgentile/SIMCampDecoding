@@ -1,16 +1,11 @@
 import random
 
-def numberToLetter(n):
-    return chr(97 + n)
-
-def letterToNumber(l):
-    return ord(l) - 97
-
 def compare(password, query):
     if password < query:
         print("Too high! PASSWORD < " + str(query))
     else:
         print("Too low!  PASSWORD > " + str(query))
+
 
 if __name__ == '__main__':
     random.seed()
