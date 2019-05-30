@@ -1,4 +1,4 @@
-import random
+import random   # randint
 
 def compare(password, query):
     if password < query:
@@ -9,7 +9,7 @@ def compare(password, query):
 
 if __name__ == '__main__':
     random.seed()
-    password = random.randint(0,1024)
+    password = random.randint(0,1000)
     usr_input = input("Enter your guess: ")
     guess = int(usr_input)
     count = 1

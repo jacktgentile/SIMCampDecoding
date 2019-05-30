@@ -1,23 +1,18 @@
-def numberToLetter(num):
-    return chr(97 + num)
+### DECLARE ANY EXTRA FUNCTIONS HERE ###
 
-def letterToNumber(letter):
-    return ord(letter) - 97
+
 
 
 def encryptLetter(letter, key):
-    num = letterToNumber(letter)
-    num = (num + key) % 26
-    return numberToLetter(num)
+    ### YOUR CODE GOES HERE ###
+    return 'x'
 
 
+### ---------- DO NOT TOUCH THIS CODE ---------- ###
 if __name__ == '__main__':
     message = input("Enter your message:  ").lower()
     key = int(input("Enter your key:  "))
     secret_message = ""
     for c in message:
-        if c.isalpha():
-            secret_message += encryptLetter(c, key)
-        else:
-            secret_message += c
+        secret_message += encryptLetter(c, key)
     print("Encrypted message is\n" + secret_message)
