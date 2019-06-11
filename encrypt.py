@@ -1,10 +1,9 @@
-### DECLARE ANY EXTRA FUNCTIONS HERE ###
-
+# DECLARE ANY EXTRA FUNCTIONS HERE
 
 
 
 def encryptLetter(letter, key):
-    ### YOUR CODE GOES HERE ###
+    # YOUR CODE GOES HERE
     return 'x'
 
 

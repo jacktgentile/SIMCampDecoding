@@ -1,29 +1,24 @@
 import random
 
-### password is the actual value, query is the guess
-### return -1 if password < query, 1 otherwise
-def compare(password, query):
-    if password < query:
-        print("PASSWORD < " + str(query))
-        return -1
-    else:
-        print("PASSWORD > " + str(query))
-        return 1
-
 
 if __name__ == '__main__':
+    # This stuff happens once at the beginning of the program
     random.seed()
-    max = 1000000
-    password = random.randint(0,max)
+    max = 10000
+    password = random.randint(0, max)
 
+    # Change the code below
+    # Here are your initial values
     count = 1
-    guess = max / 2
-    while(password != guess):
-        count += 1
-### ---------- EDIT THE CODE BELOW THIS COMMENT ---------- ###
+    guess = 0
+    delta = 1
+    while(abs(password-guess) > 0.5):
+        # This stuff happens everytime our guess is wrong
+        count = count + 1
+        delta = 1
         if password < guess:
-            guess = guess - 1
+            guess = guess - delta
         else:
-            guess = guess + 1
-### ---------- EDIT THE CODE ABOVE THIS COMMENT ---------- ###
-    print("\n" + str(guess) + " is correct, and it only took you " + str(count) + " tries!")
+            guess = guess + delta
+    # Don't change this line
+    print("\n" + str(password) + " is correct, and it only took you " + str(count) + " tries!")
